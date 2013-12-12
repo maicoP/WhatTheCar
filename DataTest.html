@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>  
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/html5sql.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/Data.js"></script>
+   
+
+</head>
+<body onload="onBodyLoad()">
+    <div id="contentImage">
+    
+    </div>
+    <div id="contentQuestion">
+    
+    </div>
+    <div id="contenAnswers">
+        <input class="btnAnswer" type='button' value='' id='btn1'><br>
+        <input class="btnAnswer" type='button' value='' id='btn2'><br>
+        <input class="btnAnswer" type='button' value='' id='btn3'><br>
+    </div>
+    <button id="btnNext">Next</button>
+    <div data-role="popup" id="popupBasic">
+        <p>This is your score:</p>
+        <p id="score"></p>
+    </div>
+</body > 
+<script type="text/javascript" charset="utf-8">
+    function onBodyLoad()
+    {
+        console.log("Body Loaded");
+        document.addEventListener("deviceready", onDeviceReady,false);
+        onDeviceReady();
+    }
+    
+    function onDeviceReady()
+    {
+        //dropDataBase();
+        //dropTables();
+        checkDB();
+        dataLoaded();
+    }
+</script>
+<script type="text/javascript" charset="utf-8" src="js/Quiz.js"></script>
+</html>
